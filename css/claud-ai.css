@@ -1,0 +1,13 @@
+#claud-ai-form {
+    margin: 20px 0;
+}
+#claud-ai-input {
+    padding: 10px;
+    width: 80%;
+}
+#claud-ai-submit {
+    padding: 10px 20px;
+}
+#claud-ai-response {
+    margin-top: 20px;
+}
