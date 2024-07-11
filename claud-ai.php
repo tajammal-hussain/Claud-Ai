@@ -67,13 +67,22 @@ function claud_ai_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'claud_ai_enqueue_scripts');
 
 // Step 4: Create the shortcode
+// Step 4: Create the shortcode
 function claud_ai_shortcode() {
     ob_start();
     ?>
     <div id="claud-ai-form">
-        <input type="text" id="claud-ai-input" />
-        <button id="claud-ai-submit">Submit</button>
-        <div id="claud-ai-response"></div>
+        <form id="convo" onsubmit="return false;">
+            <div class="chatbox-wrapper" id="c965dcc4c4">
+                <textarea class="chatbox" placeholder="Chat with AI..." rows="10" cols="50" style="height: 1px;"></textarea>
+                <div class="chatoptionsBox">
+                   <button class="deleteBoxButton" type="button">Delete</button>
+                </div>
+                <div class="editsBox">
+                    <!--save & go, cancel buttons-->
+                </div>
+            </div>
+        </form>
     </div>
     <?php
     return ob_get_clean();
